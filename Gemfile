@@ -27,8 +27,10 @@ gem 'best_in_place', '~> 3.0.1'
 gem 'devise'
 gem 'sequenced'
 gem 'draper'
-gem 'slim-rails'
+gem 'slim'
 gem 'simple_form'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
