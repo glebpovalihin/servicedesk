@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171024175436) do
+ActiveRecord::Schema.define(version: 20171030161737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,18 +22,31 @@ ActiveRecord::Schema.define(version: 20171024175436) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "issue_states", force: :cascade do |t|
-    t.integer "issue_component_id", null: false
-    t.integer "issue_id", null: false
-    t.integer "next_state_id"
-    t.integer "previous_state_id"
-    t.boolean "current_state?", default: false
+  create_table "component_triggers", force: :cascade do |t|
+    t.integer "issue_id"
+    t.integer "issue_component_id"
+    t.integer "event", default: 0
+    t.integer "reaction_type", default: 0
+    t.jsonb "selected_attributes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "issue_components", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description"
+    t.integer "execution_time"
+    t.integer "issue_id"
+    t.integer "previous_component_id"
+    t.integer "next_component_id"
+    t.boolean "current_state?"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "issues", force: :cascade do |t|
     t.string "name", null: false
+    t.integer "account_id"
     t.integer "time_total", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
