@@ -30,6 +30,7 @@ gem 'draper'
 gem 'slim'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap_sb_admin_base_v2'
 gem 'jquery-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

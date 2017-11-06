@@ -8,13 +8,10 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header class="header">
-
-  </header>
-
   <body>
-    <div class="main-block">
-      <%= yield %>
-    </div>
+    <%- if current_user.present? %>
+      <%= render 'layouts/header.html.slim' %>
+    <%- end %>
+    <%= yield %>
   </body>
 </html>

@@ -1,0 +1,7 @@
+ru:
+  registration_form:
+    label: 'Регистрация нового пользователя'
+    submit_button: 'Зарегистрировать'
+  sidebar:
+    contact:
+      my_issues: 'Мои услуги'

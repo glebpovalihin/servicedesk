@@ -7,7 +7,6 @@ class CreateIssueComponents < ActiveRecord::Migration[5.1]
       t.integer :issue_id
       t.integer :previous_component_id
       t.integer :next_component_id
-      t.boolean :current_state?
       t.timestamps
     end
   end

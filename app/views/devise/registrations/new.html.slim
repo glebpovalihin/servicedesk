@@ -1,0 +1,22 @@
+div.row
+  div.col-md-4.col-md-offset-4
+    div.login-panel.panel.panel-default
+      div.panel-heading
+        h3.panel-title = t('registration_form.label')
+      div.panel-body
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = f.error_notification
+          fieldset
+            div.form-group
+              input.form-control placeholder='E-mail' name='user[email]' autofocus="" type='email' required='true'
+            div.form-group
+              input.form-control placeholder="Password" name="user[password]" value="" type="password"
+            div.form-group
+              input.form-control placeholder="PasswordConfirmation" name="user[password_confirmation]" value="" type="password" required='true'
+            /div.checkbox
+              /label
+              /  input name="remember" value="Remember Me" type="checkbox"Remember Me
+            = f.hidden_field :type, value: 'Contact'
+            = f.button :submit, t('registration_form.submit_button'), class: 'btn btn-lg btn-success btn-block'
+
+    = render 'devise/shared/links'
