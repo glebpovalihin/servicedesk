@@ -5,3 +5,18 @@ ru:
   sidebar:
     contact:
       my_issues: 'Мои услуги'
+  issues_list:
+    title: 'Услуги'
+    my_issues_table:
+      title: 'Мои услуги'
+      thead:
+        name: 'Название'
+        current_state: 'Текущее состояние'
+        current_state_description: 'Описание текущего состояния'
+        execution_time: 'Рассчетное время выполнения'
+        previous_state: 'Предыдущее состояние'
+        next_state: 'Следующее состояние'
+    description_block:
+      title: 'Важная информация'
+      body: 'О создании и редактировании услуг вы можете узнать в подготовленных материалах по созданию и декомпозиции услуг, представленных по ссылке'
+      link: 'Узнать больше об услугах'

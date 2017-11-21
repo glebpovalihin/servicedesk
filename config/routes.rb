@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  resource :clients do
-    resources :exemplars
-  end
-
+  root 'exemplars#index'
+  resources :exemplars
   resources :issues
-
+  resources :charts
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

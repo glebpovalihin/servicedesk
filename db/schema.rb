@@ -44,7 +44,8 @@ ActiveRecord::Schema.define(version: 20171106083015) do
   end
 
   create_table "issue_exemplars", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "contact_id"
+    t.integer "issue_id"
     t.boolean "processed"
     t.integer "current_state_id"
     t.datetime "created_at", null: false
